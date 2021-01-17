@@ -66,18 +66,21 @@ namespace BaseNumberConverter
         private void button1_Click(object sender, EventArgs e)
         {
             String sThisValue = inputValueTB.Text;
-            // check to see all characters are valid
-            if (Logic.AllValidCharacters(sThisValue, Program.cArrayChars.ToList(), (iInputBase + 1))){
-                inputValueTB.Text = "";
-                MessageBox.Show(Logic.ConvertBase(sThisValue, (iInputBase + 1), (iOutputBase + 1)));
-            }
-            else
+            if (sThisValue.Length > 0)
             {
-                inputValueTB.Text = "";
-                MessageBox.Show("Invalid character(s) entered.  Please try again");
+                // check to see all characters are valid
+                if (Logic.AllValidCharacters(sThisValue, Program.cArrayChars.ToList(), (iInputBase + 1)))
+                {
+                    inputValueTB.Text = "";
+                    MessageBox.Show(Logic.ConvertBase(sThisValue, (iInputBase + 1), (iOutputBase + 1)));
+                }
+                else
+                {
+                    inputValueTB.Text = "";
+                    MessageBox.Show("Invalid character(s) entered.  Please try again");
+                }
             }
         }
-
 
 
         private void UnlockConvertButton()
