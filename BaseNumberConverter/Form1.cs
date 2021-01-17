@@ -1,4 +1,7 @@
-﻿using System;
+﻿// Chad Weirick
+// UAT MS507
+// This is the main UI module.
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -39,6 +42,8 @@ namespace BaseNumberConverter
             foreach (int iThisNumber in Program.iArrayCount){
                 this.inputNumberBaseLB.Items.Add(iThisNumber.ToString());
             }
+            // remove last item as it is not valid
+            this.inputNumberBaseLB.Items.RemoveAt(this.inputNumberBaseLB.Items.Count - 1);
             this.inputNumberBaseLB.Update();
         }
 
@@ -48,7 +53,9 @@ namespace BaseNumberConverter
             {
                 this.outputNumberLB.Items.Add(iThisNumber.ToString());
             }
-            this.inputNumberBaseLB.Update();
+            // remove last item as it is not valid
+            this.outputNumberLB.Items.RemoveAt(this.outputNumberLB.Items.Count - 1);
+            this.outputNumberLB.Update();
         }
 
         private void outputNumberBaseLabel_Click(object sender, EventArgs e)
@@ -60,8 +67,9 @@ namespace BaseNumberConverter
         {
             String sThisValue = inputValueTB.Text;
             // check to see all characters are valid
-            if (Logic.AllValidCharacters(sThisValue, Program.cArrayChars.ToList())){
-
+            if (Logic.AllValidCharacters(sThisValue, Program.cArrayChars.ToList(), (iInputBase + 1))){
+                inputValueTB.Text = "";
+                MessageBox.Show(Logic.ConvertBase(sThisValue, (iInputBase + 1), (iOutputBase + 1)));
             }
             else
             {

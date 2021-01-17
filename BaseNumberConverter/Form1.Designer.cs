@@ -41,9 +41,10 @@ namespace BaseNumberConverter
             // 
             // ConvertButton
             // 
-            this.ConvertButton.Location = new System.Drawing.Point(153, 10);
+            this.ConvertButton.Location = new System.Drawing.Point(230, 15);
+            this.ConvertButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ConvertButton.Name = "ConvertButton";
-            this.ConvertButton.Size = new System.Drawing.Size(75, 23);
+            this.ConvertButton.Size = new System.Drawing.Size(112, 35);
             this.ConvertButton.TabIndex = 0;
             this.ConvertButton.Text = "Convert";
             this.ConvertButton.UseVisualStyleBackColor = true;
@@ -52,9 +53,10 @@ namespace BaseNumberConverter
             // inputValueLabel
             // 
             this.inputValueLabel.AutoSize = true;
-            this.inputValueLabel.Location = new System.Drawing.Point(13, 13);
+            this.inputValueLabel.Location = new System.Drawing.Point(20, 20);
+            this.inputValueLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.inputValueLabel.Name = "inputValueLabel";
-            this.inputValueLabel.Size = new System.Drawing.Size(60, 13);
+            this.inputValueLabel.Size = new System.Drawing.Size(87, 20);
             this.inputValueLabel.TabIndex = 1;
             this.inputValueLabel.Text = "Input value";
             this.inputValueLabel.Click += new System.EventHandler(this.label1_Click);
@@ -62,25 +64,28 @@ namespace BaseNumberConverter
             // inputNumberBaseLabel
             // 
             this.inputNumberBaseLabel.AutoSize = true;
-            this.inputNumberBaseLabel.Location = new System.Drawing.Point(13, 42);
+            this.inputNumberBaseLabel.Location = new System.Drawing.Point(20, 65);
+            this.inputNumberBaseLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.inputNumberBaseLabel.Name = "inputNumberBaseLabel";
-            this.inputNumberBaseLabel.Size = new System.Drawing.Size(95, 13);
+            this.inputNumberBaseLabel.Size = new System.Drawing.Size(143, 20);
             this.inputNumberBaseLabel.TabIndex = 2;
             this.inputNumberBaseLabel.Text = "Input number base";
             // 
             // inputValueTB
             // 
-            this.inputValueTB.Location = new System.Drawing.Point(79, 12);
+            this.inputValueTB.Location = new System.Drawing.Point(118, 18);
+            this.inputValueTB.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.inputValueTB.Name = "inputValueTB";
-            this.inputValueTB.Size = new System.Drawing.Size(59, 20);
+            this.inputValueTB.Size = new System.Drawing.Size(86, 26);
             this.inputValueTB.TabIndex = 3;
             // 
             // outputNumberBaseLabel
             // 
             this.outputNumberBaseLabel.AutoSize = true;
-            this.outputNumberBaseLabel.Location = new System.Drawing.Point(135, 42);
+            this.outputNumberBaseLabel.Location = new System.Drawing.Point(202, 65);
+            this.outputNumberBaseLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.outputNumberBaseLabel.Name = "outputNumberBaseLabel";
-            this.outputNumberBaseLabel.Size = new System.Drawing.Size(103, 13);
+            this.outputNumberBaseLabel.Size = new System.Drawing.Size(155, 20);
             this.outputNumberBaseLabel.TabIndex = 5;
             this.outputNumberBaseLabel.Text = "Output number base";
             this.outputNumberBaseLabel.Click += new System.EventHandler(this.outputNumberBaseLabel_Click);
@@ -88,26 +93,30 @@ namespace BaseNumberConverter
             // inputNumberBaseLB
             // 
             this.inputNumberBaseLB.FormattingEnabled = true;
-            this.inputNumberBaseLB.Location = new System.Drawing.Point(16, 70);
+            this.inputNumberBaseLB.ItemHeight = 20;
+            this.inputNumberBaseLB.Location = new System.Drawing.Point(24, 108);
+            this.inputNumberBaseLB.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.inputNumberBaseLB.Name = "inputNumberBaseLB";
-            this.inputNumberBaseLB.Size = new System.Drawing.Size(100, 82);
+            this.inputNumberBaseLB.Size = new System.Drawing.Size(148, 124);
             this.inputNumberBaseLB.TabIndex = 6;
             this.inputNumberBaseLB.SelectedIndexChanged += new System.EventHandler(this.inputNumberBaseLB_SelectedIndexChanged);
             // 
             // outputNumberLB
             // 
             this.outputNumberLB.FormattingEnabled = true;
-            this.outputNumberLB.Location = new System.Drawing.Point(138, 70);
+            this.outputNumberLB.ItemHeight = 20;
+            this.outputNumberLB.Location = new System.Drawing.Point(207, 108);
+            this.outputNumberLB.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.outputNumberLB.Name = "outputNumberLB";
-            this.outputNumberLB.Size = new System.Drawing.Size(100, 82);
+            this.outputNumberLB.Size = new System.Drawing.Size(148, 124);
             this.outputNumberLB.TabIndex = 7;
             this.outputNumberLB.SelectedIndexChanged += new System.EventHandler(this.outputNumberLB_SelectedIndexChanged);
             // 
             // MainWindows
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(250, 167);
+            this.ClientSize = new System.Drawing.Size(375, 257);
             this.Controls.Add(this.outputNumberLB);
             this.Controls.Add(this.inputNumberBaseLB);
             this.Controls.Add(this.outputNumberBaseLabel);
@@ -115,8 +124,10 @@ namespace BaseNumberConverter
             this.Controls.Add(this.inputNumberBaseLabel);
             this.Controls.Add(this.inputValueLabel);
             this.Controls.Add(this.ConvertButton);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "MainWindows";
-            this.Text = "Unit Converter";
+            this.Text = "Base # Converter";
             this.ResumeLayout(false);
             this.PerformLayout();
 
